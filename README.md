@@ -2,7 +2,7 @@
 
 This is a test designed to test the basic web development skills of potential candidates.
 
-## Guidelines
+## Instructions
 
 Modify the html and complete the CSS and Javascript as you see fit to build a simple image slider/carousel widget.
 
