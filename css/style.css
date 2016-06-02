@@ -1,9 +1,19 @@
+body {
+  margin: 0;
+}
+
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 #container>img {
   display: none;
 }
 
 .carousel {
-  width: 355px;
+  width: 370px;
+  margin: 0 auto;
 }
 
 .arrow, .carousel-image {
@@ -22,7 +32,7 @@
 
 .arrow img {
   height: 20px;
-  margin-top: 80px;
+  margin-top: 90px;
 }
 
 .left-arrow img{
@@ -35,11 +45,43 @@
   overflow-x: hidden;
   text-align: center;
   border: 1px solid gainsboro;
-  padding 9px;
+  padding: 9px;
 }
 
 .carousel-image img {
   max-width: 300px;
   height: 180px;
   vertical-align: middle;
+}
+
+@media (max-width: 400px) {
+
+  .carousel {
+    position:relative;
+    height: 230px;
+    width: 320px;
+  }
+
+  .arrow, .carousel-image {
+    position: absolute;
+  }
+
+  .arrow {
+    height: 30px;
+    width: 160px;
+  }
+
+  .arrow img {
+    margin: 5px 70px 5px 70px;
+  }
+
+  .left-arrow {
+    bottom: 0;
+    left: 0;
+  }
+
+  .right-arrow {
+    bottom: 0;
+    left: 160px;
+  }
 }
