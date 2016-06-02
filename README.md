@@ -44,4 +44,3 @@ We grade your submission on a few key factors:
 - Code quality and readability
 - Appropriate use of code commenting
 - Logical seperation of functionality
-
