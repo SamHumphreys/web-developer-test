@@ -48,6 +48,10 @@ var addClickListeners = function () {
   var rightButton = document.getElementsByClassName('right-arrow')[0];
   rightButton.addEventListener('click', clickNextImage);
 
+  var carouselImage = document.getElementsByClassName('carousel-image')[0];
+  carouselImage.addEventListener('click', clickNextImage);
+
+
   window.onkeyup = function (e) {
     if (e.keyCode === 37) {
       clickPrevImage();
@@ -89,7 +93,7 @@ var nextImage = function () {
 };
 
 var addTimer = function () {
-  // timerVar = setInterval(nextImage, 3000);
+  timerVar = setInterval(nextImage, 3000);
 };
 
 
