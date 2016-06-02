@@ -1,0 +1,45 @@
+#container>img {
+  display: none;
+}
+
+.carousel {
+  width: 355px;
+}
+
+.arrow, .carousel-image {
+  display: inline-block;
+  vertical-align: top;
+  height: 180px;
+}
+
+.arrow {
+  width: 25px;
+}
+
+.right-arrow {
+  text-align: right;
+}
+
+.arrow img {
+  height: 20px;
+  margin-top: 80px;
+}
+
+.left-arrow img{
+  transform: rotate(180deg);
+}
+
+.carousel-image {
+  background: radial-gradient(#333, #bee);
+  width: 300px;
+  overflow-x: hidden;
+  text-align: center;
+  border: 1px solid gainsboro;
+  padding 9px;
+}
+
+.carousel-image img {
+  max-width: 300px;
+  height: 180px;
+  vertical-align: middle;
+}

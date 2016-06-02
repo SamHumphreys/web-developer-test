@@ -11,26 +11,21 @@ var getImages = function () {
   }
 };
 
-//hides the container
-var clearDisplay = function () {
-  document.getElementById('container').style.display = 'none';
-};
-
 //creates a div with 3 sections, the left arrow, carouselImage, and right arrow
 var createCarousel = function () {
-  var body = document.getElementsByTagName('body')[0];
+  var container = document.getElementById('container');
   var carousel = document.createElement('div');
   carousel.className = 'carousel';
-  body.appendChild(carousel);
+  container.appendChild(carousel);
 
   var leftArrow = document.createElement('div');
   leftArrow.className = 'left-arrow arrow';
-  leftArrow.innerHTML = '<img src="img/arrows/arrow.png">';
+  leftArrow.innerHTML = '<img src="img/carousel-resources/arrow.png">';
   var carouselImage = document.createElement('div');
   carouselImage.className = 'carousel-image';
   var rightArrow = document.createElement('div');
   rightArrow.className = 'right-arrow arrow';
-  rightArrow.innerHTML = '<img src="img/arrows/arrow.png">';
+  rightArrow.innerHTML = '<img src="img/carousel-resources/arrow.png">';
 
   carousel.appendChild(leftArrow);
   carousel.appendChild(carouselImage);
@@ -52,6 +47,15 @@ var addClickListeners = function () {
 
   var rightButton = document.getElementsByClassName('right-arrow')[0];
   rightButton.addEventListener('click', clickNextImage);
+
+  window.onkeyup = function (e) {
+    if (e.keyCode === 37) {
+      clickPrevImage();
+    };
+    if (e.keyCode === 39) {
+      clickNextImage();
+    };
+  };
 };
 
 var clickPrevImage = function () {
@@ -85,12 +89,11 @@ var nextImage = function () {
 };
 
 var addTimer = function () {
-  timerVar = setInterval(nextImage, 3000);
+  // timerVar = setInterval(nextImage, 3000);
 };
 
 
 getImages();
-clearDisplay();
 createCarousel();
 showImage(currentImgIndex);
 addClickListeners();
